@@ -16,33 +16,13 @@ The **Daily Productivity OS** is a multi-agent system powered by **Google Gemini
 
 The system uses a **Hub-and-Spoke** multi-agent architecture with a **Memory Bank** for persistence.
 
-```mermaid
-graph TD
-    User[User Input] --> App[Streamlit UI]
-    App --> Orchestrator[Orchestrator Agent]
+![Architecture Diagram](architecture_diagram.png)
 
-    subgraph "Core Agent System"
-        Orchestrator --> Loop[Loop Agent]
-        Loop --> Reminder[Reminder Agent]
-        Loop --> Planner[Task Planner Agent]
-        Loop --> Coach[Focus Coach Agent]
-    end
-
-    subgraph "Tools (MCP Style)"
-        Planner --> CalendarTool[Calendar Tool]
-        Reminder --> TaskTool[Task Tool]
-    end
-
-    subgraph "Memory"
-        Loop --> Session[InMemory Session]
-        Loop --> Bank[Memory Bank (JSON)]
-    end
-
-    subgraph "Observability"
-        Orchestrator -.-> Logger[Agent Logger]
-        Loop -.-> Logger
-    end
-```
+### The Agent Team
+1.  **Orchestrator Agent**: The entry point that understands user intent and routes requests.
+2.  **Reminder Agent (The Parser)**: Uses advanced semantic analysis to extract structured tasks, deadlines, and priorities from messy natural language.
+3.  **Task Planner Agent (The Strategist)**: A constraint-satisfaction engine that maps tasks to time slots. It respects "Deep Work" blocks, avoids calendar conflicts, and ensures realistic duration estimates.
+4.  **Focus Coach Agent (The Psychologist)**: Analyzes the generated schedule and provides tactical advice (e.g., "You have a heavy morning; take a walk at 11 AM") based on the user's work style.
 
 ## ✨ Key Features
 
