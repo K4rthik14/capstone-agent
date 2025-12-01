@@ -9,6 +9,8 @@ venv/
 .venv/
 *.log
 
+__pycache__
+
 # Streamlit
 .streamlit/secrets.toml
 
