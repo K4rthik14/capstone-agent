@@ -49,8 +49,8 @@ The system uses a **Hub-and-Spoke** multi-agent architecture with a **Memory Ban
 
 1.  **Clone the repository**:
     ```bash
-    git clone <repo-url>
-    cd capstone-agent
+    git clone https://github.com/K4rthik14/dayflow-agent.git
+    cd dayflow-agent
     ```
 
 2.  **Install dependencies**:
