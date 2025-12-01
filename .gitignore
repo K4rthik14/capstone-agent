@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Project Specific (Sensitive Data)
+user_preferences.json
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
